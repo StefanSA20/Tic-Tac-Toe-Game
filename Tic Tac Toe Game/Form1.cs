@@ -13,7 +13,7 @@ namespace Tic_Tac_Toe_Game
         Random random = new Random();
         int playerWinCount = 0;
         int computerWinCount = 0;
-        int tiedGamesCount = 0;
+        int gameNumberCount = 0;
         List<Button> buttons;
 
 
@@ -90,11 +90,11 @@ namespace Tic_Tac_Toe_Game
                 MessageBox.Show("Computer Wins", "Try Again");
                 computerWinCount++;
                 label2.Text = "Computer Wins: " + computerWinCount;
-                RestartGame();
+                RestartGame();            
             }
         }
 
-        //This function returns the initial state of our buttons
+        //This function returns the initial state of our buttons and counts the number of games played
         private void RestartGame()
         {
             buttons = new List<Button> { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
@@ -105,6 +105,8 @@ namespace Tic_Tac_Toe_Game
                 x.Text = "?";
                 x.BackColor = DefaultBackColor;
             }
+            gameNumberCount++;
+            label3.Text = "Game Number: " + gameNumberCount;
         }
 
 

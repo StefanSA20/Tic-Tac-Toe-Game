@@ -43,6 +43,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.ComputerTimer = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -216,12 +217,25 @@
             this.ComputerTimer.Interval = 1000;
             this.ComputerTimer.Tick += new System.EventHandler(this.ComputerMove);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(303, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 29);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Game Number";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -256,5 +270,6 @@
         private Button button9;
         private Button button10;
         private System.Windows.Forms.Timer ComputerTimer;
+        private Label label3;
     }
 }
